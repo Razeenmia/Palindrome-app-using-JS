@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>// Function to check if a string is a palindrome
+        function isPalindrome(str) {
+            // Normalize the string: remove non-alphanumeric characters and convert to lowercase
+            const normalizedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+        
+            // Reverse the normalized string
+            const reversedStr = normalizedStr.split('').reverse().join('');
+        
+            // Compare the original normalized string with the reversed one
+            if (normalizedStr === reversedStr) {
+                return true;  // The string is a palindrome
+            } else {
+                return false; // The string is not a palindrome
+            }
+        }
+        
+        // Example usage:
+        console.log(isPalindrome("A man, a plan, a canal, Panama")); // true
+        console.log(isPalindrome("Hello, World!")); // false
+        </script>
+</body>
+</html>
